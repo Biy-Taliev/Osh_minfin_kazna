@@ -20,7 +20,7 @@ def news(request):
         'news': rows
     }
 
-    return render(request, 'kaznacheistvo_site/news.html', context)
+    return render(request, 'kaznacheistvo_site/news/index.html', context)
 
 def newsDetails(request, id):
 
@@ -35,7 +35,7 @@ def newsDetails(request, id):
         'details': details,
     }
 
-    return render(request, 'kaznacheistvo_site/newsDetails.html', context)
+    return render(request, 'kaznacheistvo_site/news/pages/single_page.html', context)
 
 def supportPage(request):
 
@@ -112,7 +112,7 @@ def questionsDetails(request, id):
 
 
 def about(request):
-    return render(request, "")
+    return render(request, "kaznacheistvo_site/about.html")
 
 def laws(request):
-    return render(request, "")
+    return render(request, "kaznacheistvo_site/laws.html")

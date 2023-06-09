@@ -12,6 +12,8 @@ urlpatterns = [
     path('support/', supportPage, name='support'),
     path('chat/', chat, name='chat'),
     path('question/<int:id>', questionsDetails, name='question'),
+    path('laws/', laws, name = 'laws'),
+    path('about/', about , name = 'about'),
 
 ]
 
