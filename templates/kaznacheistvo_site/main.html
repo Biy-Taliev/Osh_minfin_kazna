@@ -3,5 +3,120 @@
 
 
 {% block content %}
+
+            <!------------------------------------------------------------------------------ banner ------------------------------------------------------------------------------>
+            <section class="banner_main">
+                <div id="banner1" class="carousel slide" data-ride="carousel">
+       
+                   <div class="carousel-inner">
+                      <div class="carousel-item active">
+                         <div class="container">
+                            <div class="carousel-caption">
+                               <div class="row">
+                                  <div class="col-md-6">
+                                     <div class="text-bg">
+                                        <h1>Прзадник</h1>
+                                        <p>День финансово-экономического работника КР 7 июня </p>
+                                        <a href="#">Читать </a> <a href="contact.html">Поддержка </a>
+                                     </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                     <div class="text_img">
+                                        <figure><img src="{% static 'main/images/minfin_osh.jpg' %}" alt="#"/></figure>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="carousel-item">
+                         <div class="container">
+                            <div class="carousel-caption">
+                               <div class="row">
+                                  <div class="col-md-6">
+                                     <div class="text-bg">
+                                        <h1>Бюджет города</h1>
+                                        <p>Бюджет города Ош на 2023 год составляет: 2.509.306,2 сом</p>
+                                        <a href="#">Читать </a> <a href="contact.html">Поддержка </a>
+                                     </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                     <div class="text_img">
+                                        <figure><img src="{% static 'main/images/Osh_sl.jpg' %}" alt="#"/></figure>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+                   <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                   </a>
+                   <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+                   <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                   </a>
+                </div>
+             </section>
+             <!------------------------------------------------------------------------------ end banner ------------------------------------------------------------------------------>
+ 
+             <!-------------------------------------------------------------------------- about section start -------------------------------------------------------------------------->
+             <div class="about_section layout_padding">
+                <div class="container">
+                   <div class="row">
+                      <div class="col-md-6">
+                         <div class="about_taital_main">
+                            <div class="about_taital">О нас</div>
+                            <p class="about_text">Год оброзования казначейство 01.07.1994</p>
+                            <p class="about_text">Обслуживаем 165 бюджетных учереждений в том числе 40 финансируется из местного бюджета, 125 с республиканского бюджета и имеем более 500 казначейских счетов</p>
+                            <p class="about_text">Доходную часть составляет налоговые и таможенные поступления</p>
+                         </div>
+                      </div>
+                      <div class="col-md-6">
+                         <div class="about_img"><img src="{% static 'main/images/money.jpg' %}"></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!-------------------------------------------------------------------------- about section end -------------------------------------------------------------------------->
+            <!-------------------------------------------------------------------------- Contact -------------------------------------------------------------------------->
+            <div class="section_contact">
+                <div class="contact">
+                <h3>Поддержка</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 padding_right0">
+                            <form id="request" class="main_form">
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <input class="contactus" placeholder="ФИО" type="type" name="Name"> 
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="contactus" placeholder="Телефон" type="type" name="Phone">                          
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea class="textarea" placeholder="Message" type="type" message="Name">Сообщение</textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="send_btn">Отправить</button>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6 padding_left0">
+                            <div class="map_main">
+                            <div class="map-responsive">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d758.1789461072368!2d72.79739322653401!3d40.52577271378145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdad5c1d6a5f7f%3A0xbd8bb431bc1f60ff!2sArchitect-Pro!5e0!3m2!1sru!2skg!4v1686135134278!5m2!1sru!2skg" width="600" height="463" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!----------------------------------------------------------------------------- end contact ----------------------------------------------------------------------------->
 {% endblock %}
   
