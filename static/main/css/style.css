@@ -823,6 +823,7 @@ ul.btn li:last-child {
      display: block;
      margin-top: 10px !important;
      font-weight: 500;
+     border-radius: 20px;
 }
 
 .main_form .send_btn:hover {

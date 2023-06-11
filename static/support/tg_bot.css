@@ -1,0 +1,30 @@
+.telegram {
+    width: 100%;
+    align-items: center ;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.bot {
+    font-size: 20px;
+    transition: ease-in all 0.5s;
+    background-color: rgb(89,96,255);
+    color: #fff;
+    padding: 8px 0px;
+    max-width: 250px;
+    width: 100%;
+    margin-top: 10px !important;
+    font-weight: 500;
+
+    border: white solid 1px;
+    border-radius: 20px;
+}
+
+.bot:hover {
+    background-color: #48ca95;
+    transition: ease-in all 0.5s;
+    color: #fff;
+}
+h1 {
+    color: whitesmoke;
+}
