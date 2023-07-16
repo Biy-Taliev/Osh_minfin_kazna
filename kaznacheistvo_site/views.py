@@ -24,7 +24,7 @@ def news(request):
         'news': rows
     }
 
-    return render(request, 'kaznacheistvo_site/news/index.html', context)
+    return render(request, 'kaznacheistvo_site/news/news.html', context)
 
 @csrf_protect
 def newsDetails(request, id):
