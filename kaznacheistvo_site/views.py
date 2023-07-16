@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from .models import *
+from django.http import HttpResponseRedirect
+from django.views.decorators.csrf import *
 # Create your views here.
 
+@csrf_protect
 def index(request):
     
     lastNews = News.objects.all()[::-1][0:5]
@@ -12,6 +15,7 @@ def index(request):
 
     return render(request, 'kaznacheistvo_site/main.html',context)
 
+@csrf_protect
 def news(request):
 
     rows = News.objects.all()
@@ -22,6 +26,7 @@ def news(request):
 
     return render(request, 'kaznacheistvo_site/news/index.html', context)
 
+@csrf_protect
 def newsDetails(request, id):
 
     mainNews = News.objects.get(id=id) # новость
@@ -37,6 +42,7 @@ def newsDetails(request, id):
 
     return render(request, 'kaznacheistvo_site/news/pages/single_page.html', context)
 
+@csrf_protect
 def supportPage(request):
 
     rows = Answer.objects.all()
@@ -89,6 +95,7 @@ def chat(request):
     else:
         return render(request, "chat.html")
 
+@csrf_protect
 def questionsDetails(request, id):
     # функция для отображения детей вопросов
 
@@ -111,8 +118,19 @@ def questionsDetails(request, id):
     # третий аргумент данные для html страницы
 
 
+@csrf_exempt
 def about(request):
     return render(request, "kaznacheistvo_site/about.html")
 
+@csrf_exempt
 def laws(request):
     return render(request, "kaznacheistvo_site/laws.html")
+
+@csrf_exempt
+def subscribe(request):
+    email =  request.POST.get("email", "Undefined")
+    newRow = Subscribe.objects.create(email = email) 
+    newRow.save()
+    #return HttpResponseRedirect(request.path_info)
+    return render(request, "kaznacheistvo_site/main.html")
+

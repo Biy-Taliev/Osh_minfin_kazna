@@ -6,6 +6,7 @@ class News(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField()
     created_at = models.DateTimeField(auto_now_add=True)
+    
     def __str__(self):
         return self.title
 
@@ -32,4 +33,7 @@ class Answer(models.Model):
 class AllAnswer(models.Model):
     parrent = models.ForeignKey(Answer, on_delete=models.CASCADE, related_name='qwerty', null=True)
     child = models.ForeignKey(Answer, on_delete=models.CASCADE, related_name='qwertyy', null=True)
+
+class Subscribe(models.Model):
+    sub = models.CharField(max_length=256)
 

@@ -14,6 +14,7 @@ urlpatterns = [
     path('question/<int:id>', questionsDetails, name='question'),
     path('laws/', laws, name = 'laws'),
     path('about/', about , name = 'about'),
+    path("subscribe/", subscribe, name='subscribe'),
 
 ]
 
