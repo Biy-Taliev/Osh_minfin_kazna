@@ -1,0 +1,22 @@
+{% extends 'homepage.html' %}
+{% load static %}  
+{% block content %}
+
+    <section class="banner_main">
+        <article>  
+
+    {% for item in details %}
+
+        <h2>{{item.text}}</h2>
+        <img src="{{ item.image.url }}">
+        <p>{{ item.description|safe }}</p>
+
+    {% endfor %}
+        </article> 
+
+    </section>
+
+    
+
+
+{% endblock %}

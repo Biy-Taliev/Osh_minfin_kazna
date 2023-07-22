@@ -3,6 +3,5 @@ from .models import *
 # Register your models here.
 admin.site.register(News)
 admin.site.register(NewsDetails)
-admin.site.register(NewsImages)
 admin.site.register(Answer)
 admin.site.register(AllAnswer)

@@ -8,8 +8,7 @@ from django.views.decorators.csrf import *
 @csrf_protect
 def index(request):
     
-    lastNews = News.objects.all()[::-1][0:5]
-
+    lastNews = News.objects.all()[::-1][0:5]  # Последние новости 
     context = {
         'lastNews':lastNews
     }
@@ -19,7 +18,7 @@ def index(request):
 @csrf_protect
 def news(request):
 
-    rows = News.objects.all()
+    rows = News.objects.all() # Все данные в модуле
     
     context = {
         'news': rows
@@ -33,11 +32,9 @@ def newsDetails(request, id):
     mainNews = News.objects.get(id=id) # новость
 
     details = NewsDetails.objects.all().filter(newsObject__id=id)# множество текстов новостя
-    images = NewsImages.objects.all().filter(newsObject__id=id) # множество картинок новостя
 
     context = {
         'mainNews': mainNews,
-        'images':images,
         'details': details,
     }
 
