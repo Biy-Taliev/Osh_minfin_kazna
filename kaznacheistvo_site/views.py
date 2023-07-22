@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import *
+
 # Create your views here.
 
 @csrf_protect
@@ -13,7 +14,7 @@ def index(request):
         'lastNews':lastNews
     }
 
-    return render(request, 'kaznacheistvo_site/main.html',context)
+    return render(request, 'kaznacheistvo_site/main.html', context)
 
 @csrf_protect
 def news(request):

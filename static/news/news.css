@@ -1,0 +1,28 @@
+.news {
+    padding-top: 160px;
+}
+
+.news .container {
+    padding-bottom: 120px;
+}
+
+section .news .row {
+    align-items: center;
+    text-align: center;
+}
+section .news .right {
+    height: 100%;
+    justify-content: flex;
+    text-align: center;
+    font-size: 72px;
+}
+
+section .news .left{
+    height: 100%;
+    align-items: center;
+}
+
+section .news .left img{
+    height: 500px;
+    width: 650px;
+}

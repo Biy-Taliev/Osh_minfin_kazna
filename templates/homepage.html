@@ -33,10 +33,11 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-
+      <!------------------------------------- page css -------------------------------------->
       <link rel="stylesheet" href="{% static 'laws/laws.css' %}">
       <link rel="stylesheet" href="{% static 'about/about.css' %}">
       <link rel="stylesheet" href="{% static 'support/tg_bot.css' %}">
+      <link rel="stylesheet" href="{% static 'news/news.css' %}">
 
    </head>
    <!------------------------------------------------------------------------------------- body ------------------------------------------------------------------------------------->
@@ -165,6 +166,7 @@
                            <form class="bottom_form" method="post" action="{% url 'subscribe' %}">
                               {% csrf_token %}
                               <h3>Новости</h3>
+<!----------------------------------------------------------------- тут нужно чтобы он сохранял почту на базе "Ваша почта" ------------------------------------------------------------------>
                               <input class="enter" placeholder="Ваша почта" type="text" name="email">
                               <button class="sub_btn" type="submit">Подписаться</button>
                            </form>
