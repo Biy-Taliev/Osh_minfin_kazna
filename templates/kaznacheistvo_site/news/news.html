@@ -5,32 +5,29 @@
 {% block content %}
 
   <!------------------------------------------------------------------------------ section news ------------------------------------------------------------------------------>
-
-        
-        <section class="news">
-          {% for item in news %}
-          <div class="container">
-            <div class="carousel-caption">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="text-bg">
-                      <h1>{{item.title}}</h1>
-                      <p>{{item.description}}</p>
-                      <a href="#">Читать </a> <a href="{% url 'support' %}">Поддержка </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="text_img">
-                      <figure><img src="{{item.image.url}}" alt="#"/></figure>
-                  </div>
-                </div>
+    <section class="news">
+      {% for item in news %}
+      <div class="container">
+        <div class="carousel-caption">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="text-bg">
+                  <h1>{{item.title}}</h1>
+                  <p>{{item.description}}</p>
+                  <a href="{% url 'newsDetails' item.id %}">Читать </a> <a href="{% url 'support' %}">Поддержка </a>
               </div>
-            </div>  
+            </div>
+            <div class="col-md-6">
+              <div class="text_img">
+                  <figure><img src="{{item.image.url}}" alt="#"/></figure>
+              </div>
+            </div>
           </div>
-          {% endfor %}
-        </section>
+        </div>  
+      </div>
+      {% endfor %}
+    </section>
 
-  
  <!------------------------------------------------------------------------------ end section news ------------------------------------------------------------------------------>
 
  <!-- {% for item in news %}
@@ -41,7 +38,10 @@
  </li>
  {% endfor %} -->
 
-
+<!-- {% for item in news %}
+ <a href="{% url 'newsDetails' item.id %}">{{item.title}}</a>
+ <img src="{{item.image.url}}">
+{% endfor %} -->
 
 
 {% endblock %}
